@@ -22,25 +22,25 @@ body {
 }
 
 h3 {
-   font-family: "Comfortaa", sans-serif;
+    font-family: "Comfortaa", sans-serif;
     font-size: 40px;
     font-weight: bold;
     color: white;
- text-shadow:
+    text-shadow:
         1px 1px 0 #0077cc,
         2px 2px 0 #0077cc,
-        3px 3px 8px rgba(0,0,0,0.25);
+        3px 3px 8px rgba(0, 0, 0, 0.25);
 }
 
 form {
     width: 500px;
     min-height: 700px;
     float: none;
-   
+
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
     border-radius: 3%;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     padding: 25px 50px 25px 50px;
     margin: 25px auto 25px auto;
 }
@@ -55,13 +55,75 @@ label:not([for="html"], [for="css"], [for="javascript"], [for="php"]) {
     margin-bottom: 8px;
 }
 
-[for="html"], [for="css"], [for="javascript"], [for="php"] {
-    margin-right: 25px;
+.checkbox-option {
+    margin: 8px 50px 25px 0px;
+    width: 100px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 3px;
+    accent-color: green;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: all ease 0.3s;
+}
+
+.checkbox-option:hover {
+    background: rgba(93, 169, 255, 0.2);
+    border-color: #5DA9FF;
+}
+
+.radio-option {
+    margin: 8px 0;
+    padding: 10px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    transition: all ease 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+}
+
+.radio-option:hover {
+    background: rgba(93, 169, 255, 0.2);
+    border-color: #5DA9FF;
+    transform: translateX(5px);
+}
+
+[for="nunca"]:has(input:checked) {
+    background-color: rgba(255, 0, 0, 0.473);
+    border-color: rgb(255, 77, 77);
+    color: rgb(139, 0, 0);
+    accent-color: red;
+}
+
+[for="raramente"]:has(input:checked) {
+    background-color: rgba(255, 255, 0, 0.473);
+    border-color: rgb(255, 210, 77);
+    ;
+    color: rgb(138, 106, 0);
+    accent-color: yellow;
+}
+
+[for="frequentemente"]:has(input:checked) {
+    background-color: rgba(80, 200, 120, 0.473);
+    border-color: rgb(76, 175, 80);
+    color: rgb(31, 95, 44);
+    accent-color: green;
+}
+
+[for="sempre"]:has(input:checked) {
+    background-color: rgba(170, 100, 255, 0.473);
+    border-color: rgb(168, 85, 247);
+    color: rgb(90, 24, 154);
+    accent-color: purple;
 }
 
 input[type="text"],
 input[type="date"],
 input[type="email"],
+input[type="tel"],
+input[type="password"],
 input[type="file"],
 select,
 textarea {
@@ -69,8 +131,9 @@ textarea {
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
     box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
 textarea {
@@ -91,11 +154,17 @@ button {
 /* informa que o estilo do botão será alterado quando houver um evento de mouse sobre ele */
 button:hover {
     background: linear-gradient(to bottom, #4f9a3a, #3E7A2F);
-    
+
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
     outline: none;
     border-color: #2B7CD3;
-    box-shadow: 0 0 8px rgba(43,124,211,0.5);
+    box-shadow: 0 0 8px rgba(43, 124, 211, 0.5);
+}
+
+select {
+    cursor: pointer;
 }
