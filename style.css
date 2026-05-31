@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
 
 
-/* adiciona o CSS para uma fonte personalizada  */
-
 * {
     margin: 0;
     padding: 0;
@@ -11,11 +9,11 @@
 }
 
 body {
+    cursor: url(roundynormal.cur), auto;
     font-family: "Ubuntu", sans-serif;
     font-weight: 300;
     font-style: normal;
     background: url(windowsXp.jpg) no-repeat center center fixed;
-    /* adiciona uma imagem de fundo para a página  */
     background-size: cover;
     margin: 0;
     padding: 0;
@@ -33,9 +31,10 @@ h3 {
 }
 
 form {
-    width: 500px;
+    
+    width: 90%;
+    max-width: 500px;
     min-height: 700px;
-    float: none;
 
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
@@ -49,7 +48,7 @@ form .form-group {
     margin-top: 15px;
 }
 
-/* Cria um estilo para os labels, menos os que tiverem a propriedade "for" com os valores abaixo */
+
 label:not([for="html"], [for="css"], [for="javascript"], [for="php"]) {
     display: block;
     margin-bottom: 8px;
@@ -136,10 +135,6 @@ textarea {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
-textarea {
-    resize: vertical;
-}
-
 button {
     width: 100%;
     padding: 12px;
@@ -151,7 +146,7 @@ button {
     font-size: 16px;
 }
 
-/* informa que o estilo do botão será alterado quando houver um evento de mouse sobre ele */
+
 button:hover {
     background: linear-gradient(to bottom, #4f9a3a, #3E7A2F);
 
